@@ -1,4 +1,4 @@
-package ua.com.poseal;
+package ua.com.poseal.hello;
 
 public class HelloWorldDecoupledWithFactory {
     public static void main(String[] args) {

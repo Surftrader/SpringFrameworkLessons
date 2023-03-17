@@ -1,4 +1,4 @@
-package ua.com.poseal;
+package ua.com.poseal.hello;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,7 +14,7 @@ public class MessageSupportFactory {
     public MessageSupportFactory() {
         props = new Properties();
         try {
-            props.load(new FileReader("./src/main/java/ua/com/poseal/msf.properties"));
+            props.load(new FileReader("./src/main/java/ua/com/poseal/hello/msf.properties"));
             String renderClass = props.getProperty("render.class");
             String providerClass = props.getProperty("provider.class");
 

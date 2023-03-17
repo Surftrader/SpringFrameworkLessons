@@ -1,4 +1,4 @@
-package ua.com.poseal;
+package ua.com.poseal.hello;
 
 public interface MessageRender {
     void render();

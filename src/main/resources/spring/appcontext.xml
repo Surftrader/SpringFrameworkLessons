@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="provider" class="ua.com.poseal.HelloWorldMessageProvider"/>
-    <bean id="render" class="ua.com.poseal.StandardMessageRender">
+    <bean id="provider" class="ua.com.poseal.hello.HelloWorldMessageProvider"/>
+    <bean id="render" class="ua.com.poseal.hello.StandardMessageRender">
         <property name="messageProvider">
             <ref bean="provider"/>
         </property>
