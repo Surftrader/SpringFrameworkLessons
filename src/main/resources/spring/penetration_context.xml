@@ -6,6 +6,10 @@
 
     <bean id="car" class="ua.com.poseal.penetration.CarTesla">
         <property name="model" value="X11"/>
-<!--        <property name="age" value="2" />-->
+        <!-- <property name="age" value="2" /> -->
+        <property name="device" ref="device"/>
+    </bean>
+    <bean id="device" class="ua.com.poseal.penetration.IPadDevice">
+        <property name="model" value="apple"/>
     </bean>
 </beans>

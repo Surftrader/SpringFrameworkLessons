@@ -9,5 +9,6 @@ public class AppTest {
         Car car = context.getBean("car", Car.class);
         System.out.println(car.getModel());
         System.out.println(car.getAge());
+        System.out.println(car.getModelDevice());
     }
 }

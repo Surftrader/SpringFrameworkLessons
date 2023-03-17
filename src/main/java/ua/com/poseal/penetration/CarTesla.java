@@ -3,6 +3,7 @@ package ua.com.poseal.penetration;
 public class CarTesla implements Car {
     private String model;
     private int age;
+    private Device device;
 
     @Override
     public String getModel() {
@@ -22,7 +23,16 @@ public class CarTesla implements Car {
         return age;
     }
 
+    @Override
+    public String getModelDevice() {
+        return device.getModelDevice();
+    }
+
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void setDevice(Device device) {
+        this.device = device;
     }
 }
