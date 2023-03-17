@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="car" class="ua.com.poseal.penetration.CarTesla">
-        <property name="model" value="X11"/>
-        <!-- <property name="age" value="2" /> -->
-        <property name="device" ref="device"/>
-    </bean>
-    <bean id="device" class="ua.com.poseal.penetration.IPadDevice">
-        <property name="model" value="apple"/>
-    </bean>
+    <bean id="car"
+          class="ua.com.poseal.penetration.CarTesla"
+          p:model="X11"
+          p:age="2"
+          p:device-ref="device" />
+
+    <bean id="device"
+          class="ua.com.poseal.penetration.IPadDevice"
+          p:model="apple" />
 </beans>
