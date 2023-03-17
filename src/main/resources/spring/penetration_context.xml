@@ -2,16 +2,19 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:model_car.properties" />
 
     <bean id="car"
-          class="ua.com.poseal.penetration.CarTesla"
-          p:model="X11"
-          p:age="2"
+          class="${model.class}"
+          p:model="${model.car}"
+          p:age="${model.age}"
           p:device-ref="device" />
 
     <bean id="device"
-          class="ua.com.poseal.penetration.IPadDevice"
-          p:model="apple" />
+          class="${model.device.class}"
+          p:model="${model.device}" />
 </beans>
