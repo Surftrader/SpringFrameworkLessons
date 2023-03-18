@@ -2,9 +2,11 @@ package ua.com.poseal.constructors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
+@PropertySource("classpath:model_car.properties")
 public class Transmission {
     private String name;
 

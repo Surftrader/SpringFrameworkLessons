@@ -8,7 +8,7 @@
        https://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="ua.com.poseal.constructors"/>
-    <context:property-placeholder location="classpath:model_car.properties" />
+<!--    <context:property-placeholder location="classpath:model_car.properties" />-->
 
 <!--    <bean id="bike" class="ua.com.poseal.constructors.Motorbike">-->
 <!--        <constructor-arg index="0" value="Yamaha"/>-->
