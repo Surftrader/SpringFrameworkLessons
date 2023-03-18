@@ -1,11 +1,14 @@
 package ua.com.poseal.constructors;
 
-public class Engine {
-    private String name;
+import org.springframework.stereotype.Component;
 
-    public Engine(String name) {
-        this.name = name;
-    }
+@Component
+public class Engine {
+    private String name = "BMW";
+
+//    public Engine(String name) {
+//        this.name = name;
+//    }
 
     @Override
     public String toString() {
