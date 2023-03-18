@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AppConstructors {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/constructor.xml");
-        Motorbike motorbike = context.getBean(Motorbike.class);
+        Motorbike motorbike = context.getBean("bike",Motorbike.class);
         System.out.println(motorbike);
     }
 }
