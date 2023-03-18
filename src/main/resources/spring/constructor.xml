@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="bike" class="ua.com.poseal.constructors.Motorbike">
+        <constructor-arg index="0" value="Yamaha"/>
+        <constructor-arg index="1" ref="engine"/>
+        <constructor-arg index="2" ref="transmission"/>
+    </bean>
+
+    <bean id="engine" class="ua.com.poseal.constructors.Engine">
+        <constructor-arg value="BMW"/>
+    </bean>
+    <bean id="transmission" class="ua.com.poseal.constructors.Transmission">
+        <constructor-arg value="Wheel"/>
+    </bean>
+</beans>
