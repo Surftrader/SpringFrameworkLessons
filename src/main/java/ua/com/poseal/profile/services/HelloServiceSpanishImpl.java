@@ -1,10 +1,9 @@
 package ua.com.poseal.profile.services;
 
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Component
-@Profile("span")
+//@Component
+//@Profile("span")
 public class HelloServiceSpanishImpl implements HelloService {
     @Override
     public String getGreeting() {
