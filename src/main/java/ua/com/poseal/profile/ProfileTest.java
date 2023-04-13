@@ -4,9 +4,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import ua.com.poseal.profile.controllers.HelloController;
+import ua.com.poseal.spel.InjectSpEL;
 
 @Configuration
-@ComponentScan
+@ComponentScan("./")
 public class ProfileTest {
     public static void main(String[] args) {
 
@@ -17,5 +18,8 @@ public class ProfileTest {
 
         HelloController controller = (HelloController) ctx.getBean("helloController");
         controller.sayHello();
+
+        InjectSpEL injectSpEL = (InjectSpEL) ctx.getBean("injectSpEL");
+        System.out.println(injectSpEL);
     }
 }
