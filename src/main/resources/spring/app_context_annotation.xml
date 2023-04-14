@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util
+       https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:annotation-config />
+    <context:component-scan base-package="ua.com.poseal.collections" />
+
+    <!--  MAP  -->
+    <util:map id="map" map-class="java.util.HashMap">
+        <entry key="Value_1" value="Hi"/>
+        <entry key="Value_2" value="Java"/>
+    </util:map>
+    <!-- PROPERTY -->
+    <util:properties id="props">
+        <prop key="firstProps">Spring Core</prop>
+        <prop key="secondProps">Spring MVC</prop>
+    </util:properties>
+    <!-- SET -->
+    <util:set id="set">
+        <value>Spring Data</value>
+        <value>Spring Security</value>
+    </util:set>
+    <!-- LIST -->
+    <util:set id="list">
+        <value>Spark</value>
+        <value>JUtil</value>
+    </util:set>
+
+</beans>
