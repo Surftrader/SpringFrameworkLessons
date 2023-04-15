@@ -1,8 +1,9 @@
 package ua.com.poseal.init;
 
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class SimpleBeanWithInterface implements InitializingBean {
+public class SimpleBeanWithInterface implements InitializingBean, DisposableBean {
     private static final String DEFAULT_NAME = "Luke";
     private String name;
     private int age = Integer.MIN_VALUE;
@@ -19,6 +20,10 @@ public class SimpleBeanWithInterface implements InitializingBean {
         }
     }
 
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("Spring Bean Post Contract After Properties Set Method ");
+    }
     public void setName(String name) {
         this.name = name;
     }

@@ -6,8 +6,20 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-lazy-init="true">
 
-    <bean id="simpleBean1" class="ua.com.poseal.init.SimpleBean" init-method="init" p:name="Chris" p:age="20"/>
-    <bean id="simpleBean2" class="ua.com.poseal.init.SimpleBean" init-method="init" p:age="20"/>
-    <bean id="simpleBean3" class="ua.com.poseal.init.SimpleBean" init-method="init" p:name="Chris"/>
+    <bean id="simpleBean1"
+          class="ua.com.poseal.init.SimpleBean"
+          init-method="init"
+          destroy-method="destroy"
+          p:name="Chris" p:age="20"/>
+    <bean id="simpleBean2"
+          class="ua.com.poseal.init.SimpleBean"
+          init-method="init"
+          destroy-method="destroy"
+          p:age="20"/>
+    <bean id="simpleBean3"
+          class="ua.com.poseal.init.SimpleBean"
+          init-method="init"
+          destroy-method="destroy"
+          p:name="Chris"/>
 
 </beans>

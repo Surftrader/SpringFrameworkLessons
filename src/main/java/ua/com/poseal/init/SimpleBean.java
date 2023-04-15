@@ -15,7 +15,9 @@ public class SimpleBean {
             throw new IllegalArgumentException("You must set age properties!!!" + SimpleBean.class);
         }
     }
-
+    public void destroy() {
+        System.out.println("Spring Disposable Bean Destroy Method ");
+    }
     public void setName(String name) {
         this.name = name;
     }
