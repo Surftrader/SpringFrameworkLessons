@@ -12,6 +12,9 @@ public class AOPTest {
 
         StudentJava studentJava = acat.getBean("studentJava", StudentJava.class);
         studentJava.getMessage();
-        studentJava.getName();
+        System.out.println("This is from main");
+        System.out.println("student name: " + studentJava.getName());
+        System.out.println("This is from main");
+
     }
 }
