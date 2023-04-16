@@ -9,11 +9,12 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-@EnableAspectJAutoProxy
+//@EnableAspectJAutoProxy
 public class MyLogger {
 
 //    @Before(value = "execution(public void getMessage())")
-    @Before(value = "execution(* * .getMessage(..))")
+//    @Before(value = "execution(* * .getMessage(..))")
+    @Before(value = "within(ua.com.poseal.aop.StudentJava)")
     public void logBefore(JoinPoint joinPoint) {
         System.out.println("This is myLogger.log()");
         System.out.println(joinPoint.getSignature());
